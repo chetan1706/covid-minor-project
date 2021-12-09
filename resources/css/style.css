@@ -1,0 +1,286 @@
+/* ---------------------------------------------- */
+/*            CODE EXPLAINED TUTORIALS            */
+/*         www.youtube.com/CodeExplained          */
+/* ---------------------------------------------- */
+
+/* ---------------------------------------------- */
+/*                  LOAD FONTS                    */
+/* ---------------------------------------------- */
+@font-face {
+    font-family: 'Gilroy';
+    src: url(./Gilroy-Regular.woff) format(woff);
+}
+/* ---------------------------------------------- */
+/*                    GENERAL                     */
+/* ---------------------------------------------- */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy', sans-serif;
+}
+html{
+    font-size: 16px;
+}
+.hide{
+    display: none;
+}
+.fadein{
+    animation: fade 0.5s ease-in-out;
+
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+/* ---------------------------------------------- */
+/*                    HEADER                      */
+/* ---------------------------------------------- */
+header{
+    display: flex;
+    justify-content: space-between;
+    max-width:1200px;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    background-color: beige;
+
+
+}
+/* -------- LOGO -------- */
+.logo{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    
+}
+.logo img{
+    width:60px;
+
+}
+.logo p{
+    font-weight: bold;
+    color: rgb(226, 43, 186);
+}
+/* -------- NAV -------- */
+nav ul{
+    display: flex;
+    align-items: center;
+    
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li:last-child{
+    padding-right: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(136, 35, 17);
+    padding: 8px;
+
+}
+/* ---------------------------------------------- */
+/*                      MAIN                      */
+/* ---------------------------------------------- */
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* -------- BG IMAGE -------- */
+.stats{
+    width: 100%;
+    background-image: linear-gradient(rgba(10, 12, 12, 0.9),rgba(60, 0, 95, 0.9));
+    background-size: cover;
+}
+/* -------- LATEST REPORT -------- */
+.latest-report{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    width: 90%;
+    margin: 0 auto;
+    color: cornsilk;
+}
+.country,
+.total-cases,
+.recovered,
+.deaths{
+    height: 90px;
+}
+.name{
+    font-size: 1em;
+    color:plum;
+    font-weight: bold;
+}
+.change-country{
+    cursor:pointer;
+}
+.title{
+    font-size: 1em;
+}
+.total-cases .value{
+    font-size: 2em;
+    font-weight: bold;
+    color: powderblue;
+}
+.recovered .value{
+    font-size: 2em;
+    font-weight: bold;
+    color: greenyellow;
+}
+.deaths .value{
+    font-size: 2em;
+    font-weight: bold;
+    color: red;
+    
+}
+.new-value{
+    font-size: 1.3em;
+}
+.chart{
+    width: 80%;
+    height: 70vh;
+    min-height: 500px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.search-country{
+    top: 10px;
+    position: relative;
+    
+    
+}
+.search-box{
+    position: absolute;
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    height:30px;
+    background-color:black;
+    z-index: 1;
+    
+
+    
+    
+
+
+    
+
+}
+.search-box img{
+    width: 20px;
+    
+
+}
+.search-box input{
+    width: 360px;
+    height:25px;
+    border: none;
+    background-color: transparent;
+    color: thistle;
+    padding-left: 15px;
+    font-size: 1.1em;
+}
+.search-box img{
+    width: 20px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+.country-list{
+    display: flex;
+
+    position:absolute;
+    top: 50px;
+    width: 400px;
+    height: 300px;
+    background-color: black;
+    opacity: 0.5;
+    overflow: scroll;
+}
+.country-list ul{
+    width: 100px;
+
+}
+.country-list ul li{
+
+    list-style:none;
+    cursor: pointer;
+    padding:10px;
+    color: white;
+}
+.country-list ul li:hover{
+    border-left: 5px solid white;
+}
+footer{
+    max-width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: purple;
+    
+}
+.footer-container{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+
+}
+.copyright{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center
+}
+.copyright p{
+    color: wheat;
+}
+@media screen and (max-width: 600px){
+    .latest-report{
+        display: flex;
+        flex-direction: column;align-items: flex-start;
+        
+    }
+
+}
+    
+
+
+/* -------- CHART -------- */
+
+/* -------- SEARCH COUNTRY -------- */
+
+/* SCROLL BAR */
+.country-list::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .country-list::-webkit-scrollbar-track {
+    background:whitesmoke;
+  }
+  
+  /* Handle */
+  .country-list::-webkit-scrollbar-thumb {
+    background:pink;
+  }
+  
+  /* Handle on hover */
+  .country-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+/* ---------------------------------------------- */
+/*                    FOOTER                      */
+/* ---------------------------------------------- */
+
+/* ---------------------------------------------- */
+/*             SCREEN WIDTH < 600px               */
+/* ---------------------------------------------- */
